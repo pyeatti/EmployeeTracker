@@ -9,7 +9,7 @@ create table Departments (
  );
  
  insert into Departments (department_name)
- values ( "engineering");
+ values ( "Developer");
  
  
  create table Employees (
@@ -21,8 +21,8 @@ create table Departments (
  primary key (id)
  );
  
-  insert into Employees (first_name,last_name,manager_id)
- values ("Ian" , "Pyeatt", 1);
+  insert into Employees (first_name, last_name, manager_id)
+ values ("Ian", "Pyeatt", 1);
   create table employee_role (
   id int not null auto_increment,
   title varchar (30),
@@ -31,12 +31,10 @@ create table Departments (
   primary key(id));
   
     insert into employee_role (title, salary)
- values ("Full Stack Developer" , 100000.00);
+ values ("Junior Developer" , 80000);
 
-
--- joinning the id of the department from the employee_role and department Tables
- use employeeCMS_DB;
-
+ insert into employee_role (title, salary)
+ values ("Senior Developer" , 100000);
 
 
 select departments.id from employee_role
